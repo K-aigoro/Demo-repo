@@ -1,15 +1,24 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import { FC } from 'react';
 
-function App({ title }: { title: string }) {
-
-  return (
-    <>
-      <div>{title}</div>
-    </>
-  )
+interface AppProps {
+  title: string;
+  age: number;
 }
 
+// function App({ title }: { title: string }) {
+
+//   return (
+//     <>
+//       <div>{title}</div>
+//     </>
+//   )
+// }
+
+const App: FC<AppProps> = ({ title,age }) => {
+  return <>
+    <h1>{title}</h1>
+    <p>{age}</p>
+    
+    </>;
+}
 export default App
